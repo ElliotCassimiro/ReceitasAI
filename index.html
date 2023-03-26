@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />              
+
     <title>ProjetoDesafio</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/script.js"></script>
 </head>
-<body>
-    <Header class="pesquisa">
-        <h1 class="titulo">Pesquise Ingredientes</h1>
-        <input class="busca" type="search">
-        <button class="pesquisa">Pesquisar</button>
-              
-    </Header>
+<body onload="iniciar()">
+    <div id="principal">
+        <h2>Gerador de Receitas</h2>
+        
+        <div id="mensagem">
+            <div id="robot">
+                <div id="bot"></div>
+                <h3>BotCooker</h3>
+            </div>
+    </div>
+
+        <div id="input">
+            <input type="text" placeholder="Nova Mensagem" id="text">
+            <button id="enviar">Enviar <i class="fa-fa-paper-craft"></i></button>                
+
+        </div>
 
 
 </body>
 
 
 
-
-
-</Header>
 </html>

@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+
+}
+
+body{
+    width:100%;
+    height:100%;
+    display:block;
+    justify-content:center;
+    overflow:hidden;
+
+}
+
+#main{
+    width:100vh;
+    max-width:540px;
+    height:100vw;
+    box-shadow:inset 0 0 10px 4px #1116;
+    justify-content: center;
+
+}
+
+h2{
+    text-align: center;
+    font-family:sans-serif;
+    background: #eb3c3c;
+    color: aliceblue;
+    padding: 4px;
+    text-shadow: 1px 1px 4px #111;
+    margin-bottom: 4;
+    justify-content: center;
+
+}
+
+#mensagem{
+    outline: none;
+    height: 350px;
+    padding: 0 12px;
+    overflow-y: scroll;
+    scroll-behavior:smooth;
+
+}
+
+#bot{
+    width: 50px;
+    height: 50px;
+    background: url(botcooker.jpg);
+    background-size: 100%;
+    border-radius: 50%;
+    margin: 10px;
+
+}
+
+#robot{
+    display: flex;
+    align-items: center;
+
+}
+
+h3{
+    font-family: sans-serif;
+    font-size: 20px;
+
+}
+
+#input{
+    height: 8%;
+    min-height: 40px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 7px 14px;
+    border-radius: 36px;
+    background: linear-gradient(#eceece 50% #c35b5b 50%);
+
+}
+
+#text{
+    outline: none;
+    font-size: 20px;
+    background: #ececee;
+    color: #333;
+    border-radius: 32px 0 32px 32px;
+    padding: 0 16px;
+    border: solid 1px #777;
+    border-right: none;
+}
+
+#enviar{
+    outline: none;
+    font-size: 20px;
+    color: #ffffff;
+    background: #c35b5b;
+    border: none;
+    border-radius: 32px;
+    transition-duration: 0.2s;
+    
+}
+#enviar:active{
+    font-size: 16px;
+
+}
+
+.left, .right{
+    font-size: 18px;
+    font-family: monospace;
+    display:inline-block;
+    width:auto ;
+    max-width: 60%;
+    padding: 14px;
+    word-wrap: break-word;
+
+}
+
+.msgCon1, .msgCon1{
+    width: 100%;
+    display: inline-block;
+    
+}
