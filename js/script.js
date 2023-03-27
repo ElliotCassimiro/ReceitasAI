@@ -1,26 +1,24 @@
 
-
-function start() {
+function init() {
   let res_msg = document.createElement('div')
-  res_msg.innerHTML = "Olá sou o BotCooker, o que vamos cozinhar?";
+  res_msg.innerHTML = "Olá sou o BotCooker, o que vamos cozinhar?" ;
   res_msg.setAttribute("class","left");
 
   document.getElementById('mensagem').appendChild(res_msg);
 
-
 }
 
-  document.getElementById('resposta').addEventListener("click", async (e) =>
-  {e.preventDefault();
+  document.getElementById('resposta').addEventListener("click", async (e) => {
+  e.preventDefault();
 
-      var req = document.getElementById('msg_enviada').value ;
-      if (req == undefined || req== "") {
+      var req = document.getElementById('enviar_msg').value ;
+      if (req == undefined || req == "") {
 
       }
       else{
           var res = "";
           
-          await axios.get('https://api.api-ninjas.com/v1/recipe?query=').then(data => {
+          await axios.get(`https://api.api-ninjas.com/v1/recipe?query=`).then(data => {
             res = JSON.stringify(data.data.response)
           } )
           
@@ -47,7 +45,7 @@ function start() {
           Con1.appendChild(msg_req);
           Con2.appendChild(msg_res);
 
-          document.getElementById('text').value="";
+          document.getElementById('msg_enviada').value ="";
 
 
       }

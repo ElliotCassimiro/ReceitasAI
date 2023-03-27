@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.js" integrity="sha512-A/D/17S8jG62ka9f3jPwMs+bKGJ1f/xQts7bAUjTIKQf0anTGjlpuEz3q9q++3qRAVYKS3iVx6KzM8GPtIaYfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />              
 
@@ -11,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/script.js"></script>
 </head>
-<body>
+<body onload="init">
     <div id="principal">
         <h2>Gerador de Receitas</h2>
         
@@ -22,15 +23,12 @@
             </div>
     </div>
 
-        <div id="input">
-            <input type="text" id="msg_enviada" placeholder="Nova Mensagem" id="text">
-            <button id="enviar">Enviar <i class="fa-fa-paper-craft"></i></button>                
+        <div class="input" id ="input">
+            <input type="text" id="enviar_msg" placeholder="Nova Mensagem" id="text">
+            <button class ="enviar" id ="resposta">Enviar <i class="fa-fa-paper-craft"></i></button>                
 
         </div>
 
-
 </body>
-
-
 
 </html>
