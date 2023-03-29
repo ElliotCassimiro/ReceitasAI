@@ -3,7 +3,7 @@ const gerarReceitaElement = document.getElementById('gerarReceita');
 
 function init() {
   let res_msg = document.createElement('div')
-  res_msg.innerHTML = "Hello, I am BotCooker! Type in ingredient to get a recipe..." ;
+  res_msg.innerHTML = "Hello, I am BotCooker! Type in an ingredient to get a recipe..." ;
   res_msg.setAttribute("class","left");
   
   
@@ -26,10 +26,10 @@ var requestOptions = {
 
 function gerarReceita() {
   return fetch(GERAR_RECEITA_API_URL, requestOptions)
-  .then(response => response.json())
-  .then(data => data.content)
+  .then(response => response)
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
+  recipe.push(gerarReceita)
 }
 
 async function carregarReceita(msg_enviada) {
@@ -37,6 +37,8 @@ async function carregarReceita(msg_enviada) {
   gerarReceitaElement.innerHTML = ''
   
 }
+
+
 
       var req = document.getElementById('msg_enviada').value;
       if (req == undefined || req == "") {
