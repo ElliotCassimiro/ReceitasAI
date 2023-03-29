@@ -19,7 +19,7 @@ body{
 }
 
 #principal{
-    margin:0;
+    margin: 200px;
     height:100vh;
     width:100vw;
     max-width:540px;
