@@ -1,3 +1,7 @@
+::-webkit-scrollbar{
+    width:0;
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -14,14 +18,13 @@ body{
 
 }
 
-#main{
-    width:100vh;
+#principal{
+    margin:0;
+    height:100vh;
+    width:100vw;
     max-width:540px;
-    height:100vw;
     box-shadow:inset 0 0 10px 4px #1116;
-    justify-content: center;
-
-}
+  }
 
 h2{
     text-align: center;
@@ -55,9 +58,8 @@ h2{
 }
 
 #robot{
-    display: flex;
-    align-items: center;
-
+    display:flex;
+    align-items:center;
 }
 
 h3{
@@ -77,7 +79,7 @@ h3{
 
 }
 
-#text{
+#msg_enviada{
     outline: none;
     font-size: 20px;
     background: #ececee;
@@ -88,7 +90,7 @@ h3{
     border-right: none;
 }
 
-#enviar{
+#resposta{
     outline: none;
     font-size: 20px;
     color: #ffffff;
@@ -98,7 +100,20 @@ h3{
     transition-duration: 0.2s;
     
 }
-#enviar:active{
+
+.left, .right{
+    font-size:18px;
+    display:inline-block;
+    padding:14px;
+    width:auto;
+    max-width:60%;
+    margin:8px 16px;
+      font-family:monospace;
+      word-wrap:break-word;
+}
+
+
+#resposta:active{
     font-size: 16px;
 
 }
@@ -113,9 +128,20 @@ h3{
     word-wrap: break-word;
 
 }
+.left{
+    color:#000;
+      background:#b3bfca;
+    border-radius:0 16px 16px 16px;
+}
 
-.msgCon1, .msgCon1{
-    width: 100%;
-    display: inline-block;
-    
+.right{
+    float:right;
+    color:#fff;
+      background:#1c1f46;
+    border-radius:16px 16px 0 16px;
+}
+
+.msgCon1, .msgCon2{
+    width:100%;
+    display:inline-block;
 }
