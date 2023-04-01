@@ -1,6 +1,10 @@
 const GERAR_RECEITA_API_URL = 'https://api.apilayer.com/spoonacular/food/products/search?query='
 const gerarReceitaElement = document.getElementById('gerarReceita');
 
+  heigh
+
+}
+
 function init() {
   let res_msg = document.createElement('div')
   res_msg.innerHTML = "Hello, I am BotCooker! Type in an ingredient to get a recipe..." ;
@@ -29,7 +33,6 @@ function gerarReceita() {
   .then(response => response)
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
-  recipe.push(gerarReceita)
 }
 
 async function carregarReceita(msg_enviada) {
