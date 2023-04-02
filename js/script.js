@@ -1,9 +1,6 @@
 const GERAR_RECEITA_API_URL = 'https://api.apilayer.com/spoonacular/food/products/search?query='
 const gerarReceitaElement = document.getElementById('gerarReceita');
 
-  heigh
-
-}
 
 function init() {
   let res_msg = document.createElement('div')
@@ -18,29 +15,20 @@ function init() {
   document.getElementById('resposta').addEventListener("click", async (e) => {
   e.preventDefault();
 
-
   var myHeaders = new Headers();
-myHeaders.append("apikey", "k4iXTGyqZEOeZCTxELt1Mv2827M8R7ED");
-
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow',
-  headers: myHeaders
-};
-
-function gerarReceita() {
-  return fetch(GERAR_RECEITA_API_URL, requestOptions)
-  .then(response => response)
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-}
-
-async function carregarReceita(msg_enviada) {
-  const recipe = await gerarReceita()
-  gerarReceitaElement.innerHTML = ''
+  myHeaders.append("apikey", "k4iXTGyqZEOeZCTxELt1Mv2827M8R7ED");
   
-}
-
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+    headers: myHeaders
+  };
+  
+  fetch("https://api.apilayer.com/spoonacular/food/ingredients/search?sortDirection={sortDirection}&sort={sort}&query={query}&offset={offset}&number={number}&intolerances={intolerances}", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+  
 
 
       var req = document.getElementById('msg_enviada').value;
