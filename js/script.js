@@ -7,7 +7,6 @@ function init() {
   res_msg.innerHTML = "Hello, I am BotCooker! Type in an ingredient to get a recipe..." ;
   res_msg.setAttribute("class","left");
   
-  
 
   document.getElementById('mensagem').appendChild(res_msg);
 }
@@ -16,20 +15,26 @@ function init() {
   e.preventDefault();
 
   var myHeaders = new Headers();
-  myHeaders.append("apikey", "k4iXTGyqZEOeZCTxELt1Mv2827M8R7ED");
-  
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow',
-    headers: myHeaders
-  };
-  
-  fetch("https://api.apilayer.com/spoonacular/food/ingredients/search?sortDirection={sortDirection}&sort={sort}&query={query}&offset={offset}&number={number}&intolerances={intolerances}", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-  
+myHeaders.append("apikey", "k4iXTGyqZEOeZCTxELt1Mv2827M8R7ED");
 
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow',
+  headers: myHeaders
+};
+
+function gerarReceita() {
+    fetch(GERAR_RECEITA_API_URL, requestOptions)
+  .then(response=> response.json())
+  .then(result=> console.log(result))
+  .catch(error=> console.log('error', error));
+}
+
+async function carregarReceita(msg_enviada) {
+  const recipe = await gerarReceita()
+  gerarReceitaElement.innerHTML = ''
+  
+}
 
       var req = document.getElementById('msg_enviada').value;
       if (req == undefined || req == "") {
